@@ -16,6 +16,7 @@ ActiveAdmin.register Lesson do
 
   form do |f|
     f.inputs do
+      f.input :title
       f.has_many :tasks do |cf|
         cf.input :title
         cf.input :objective
