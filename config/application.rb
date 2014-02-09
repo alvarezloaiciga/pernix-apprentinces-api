@@ -14,5 +14,7 @@ Bundler.require(:default, :assets, Rails.env)
 module ApprenticesApi
   class Application < Rails::Application
     config.assets.initialize_on_precompile = false
+    config.i18n.enforce_available_locales = true
+    I18n.enforce_available_locales = true
   end
 end
