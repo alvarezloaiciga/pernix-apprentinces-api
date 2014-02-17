@@ -6,6 +6,7 @@ ApprenticesApi::Application.routes.draw do
     namespace :v1 do
 
       resources :lessons, only: :index
+      resources :applies, only: :create
     end
   end
 end
