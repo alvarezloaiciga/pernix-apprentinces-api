@@ -10,8 +10,6 @@ class Api::V1::AppliesController < Api::V1::ApiController
 
   private
   def new_apply_params
-    params.require(:github)
-    params.require(:email)
-    params.permit(:github, :email)
+    params.require(:apply).permit(:github, :email)
   end
 end
