@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140217200420) do
+ActiveRecord::Schema.define(version: 20140227181114) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -53,6 +53,29 @@ ActiveRecord::Schema.define(version: 20140217200420) do
     t.string "github"
     t.string "email"
   end
+
+  create_table "apprentices", force: true do |t|
+    t.string   "email",                  default: "",                                      null: false
+    t.string   "encrypted_password",     default: "",                                      null: false
+    t.string   "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count",          default: 0,                                       null: false
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "authentication_token"
+    t.string   "name"
+    t.text     "description"
+    t.float    "completion_percentage",  default: 0.0
+    t.string   "picture_url",            default: "http://pernix.cr/images/team/male.png"
+  end
+
+  add_index "apprentices", ["email"], name: "index_apprentices_on_email", unique: true, using: :btree
+  add_index "apprentices", ["reset_password_token"], name: "index_apprentices_on_reset_password_token", unique: true, using: :btree
 
   create_table "lessons", force: true do |t|
     t.string "title"

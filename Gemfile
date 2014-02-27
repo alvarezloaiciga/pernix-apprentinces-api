@@ -8,6 +8,7 @@ gem 'activeadmin', github: 'gregbell/active_admin'
 gem 'active_model_serializers', '~> 0.8.1'
 gem 'rack-cors', '~> 0.2.9', :require => 'rack/cors'
 gem 'turbolinks', '~> 2.2.1'
+gem 'devise', '3.2.2'
 
 group :assets do
   gem 'sass-rails', '~> 4.0.1'

@@ -179,6 +179,7 @@ PLATFORMS
 DEPENDENCIES
   active_model_serializers (~> 0.8.1)
   activeadmin!
+  devise (= 3.2.2)
   pg
   rack-cors (~> 0.2.9)
   rails (= 4.0.1)
